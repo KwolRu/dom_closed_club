@@ -1,0 +1,4 @@
+.cards-our-team .card.hovered {
+  transition: transform 0.3s ease;
+  transform: scale(1.03);
+}

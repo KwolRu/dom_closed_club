@@ -1,0 +1,155 @@
+{
+    "months": [
+        {
+            "name": "Март",
+            "eventCount": 2,
+            "events": [
+                {
+                    "date": "24",
+                    "time": "13:00-20:00",
+                    "title": "Открытая встреча",
+                    "features": [
+                        "Смотреть программу открытой встречи"
+                    ],
+                    "img": "assets/img/calendar/1.png",
+                    "location": "КИБЕРДОМ",
+                    "link": "https://yandex.ru/maps/-/CHu-m4N5",
+                    "calendarLink": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Открытая+встреча&dates=20240324T100000Z/20240324T170000Z&location=КИБЕРДОМ"
+                },
+                {
+                    "date": "27",
+                    "time": "18:00-20:00",
+                    "title": "Спорт/Стрельба",
+                    "features": [
+                        "Спортивное мероприятие"
+                    ],
+                    "img": "assets/img/calendar/2.png",
+                    "location": "",
+                    "link": "https://yandex.ru/maps/-/CHu-m4N5",
+                    "name_link": "записаться",
+                    "calendarLink": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Спорт/Стрельба&dates=20240327T150000Z/20240327T170000Z"
+                }
+            ]
+        },
+        {
+            "name": "Апрель",
+            "eventCount": 3,
+            "events": [
+                {
+                    "date": "2",
+                    "time": "09:00-12:00",
+                    "title": "БИЗНЕС-ЗАВТРАК",
+                    "features": [
+                        "Утро успеха и продуктивности"
+                    ],
+                    "img": "assets/img/calendar/3.png",
+                    "location": "",
+                    "link": "https://yandex.ru/maps/-/CHu-m4N5",
+                    "name_link": "записаться",
+                    "calendarLink": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=БИЗНЕС-ЗАВТРАК&dates=20240402T060000Z/20240402T090000Z"
+                },
+                {
+                    "date": "12",
+                    "time": "16:00-18:00",
+                    "title": "KIDS ТРЕНИНГ",
+                    "features": [
+                        "Тренинг в МСК Сити для детей и подростков"
+                    ],
+                    "img": "assets/img/calendar/4.png",
+                    "location": "",
+                    "link": "https://yandex.ru/maps/-/CHu-m4N5",
+                    "name_link": "записаться",
+                    "calendarLink": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=KIDS+ТРЕНИНГ&dates=20240412T130000Z/20240412T150000Z"
+                },
+                {
+                    "date": "29",
+                    "time": "13:00-20:00",
+                    "title": "ОТКРЫТАЯ ВСТРЕЧА",
+                    "features": [
+                        "Смотреть программу открытой встречи"
+                    ],
+                    "img": "assets/img/calendar/5.png",
+                    "location": "",
+                    "link": "https://yandex.ru/maps/-/CHu-m4N5",
+                    "name_link": "локация",
+                    "calendarLink": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=ОТКРЫТАЯ+ВСТРЕЧА&dates=20240429T100000Z/20240429T170000Z"
+                }
+            ]
+        },
+        {
+            "name": "Май",
+            "eventCount": 3,
+            "events": [
+                {
+                    "date": "1",
+                    "time": "09:00-12:00",
+                    "title": "CLUB KIDS",
+                    "features": [
+                        "Мероприятие для развития финансовой и грамотности детей"
+                    ],
+                    "img": "assets/img/calendar/6.png",
+                    "location": "",
+                    "link": "https://yandex.ru/maps/-/CHu-m4N5",
+                    "name_link": "записаться",
+                    "calendarLink": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=CLUB+KIDS&dates=20240501T060000Z/20240501T090000Z"
+                },
+                {
+                    "date": "7",
+                    "time": "12:00-15:00",
+                    "title": "ПАДЕЛ-ТЕННИС",
+                    "features": [
+                        "Интерактивная лекция для детей и подростков"
+                    ],
+                    "img": "assets/img/calendar/7.png",
+                    "location": "",
+                    "link": "https://yandex.ru/maps/-/CHu-m4N5",
+                    "name_link": "записаться",
+                    "calendarLink": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=ПАДЕЛ-ТЕННИС&dates=20240507T090000Z/20240507T120000Z"
+                },
+                {
+                    "date": "24",
+                    "time": "12:00-15:00",
+                    "title": "ОТКРЫТАЯ ВСТРЕЧА",
+                    "features": [
+                        "Смотреть программу открытой встречи"
+                    ],
+                    "img": "assets/img/calendar/8.png",
+                    "location": "КИБЕРДОМ",
+                    "calendarLink": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=ОТКРЫТАЯ+ВСТРЕЧА&dates=20240524T090000Z/20240524T120000Z&location=КИБЕРДОМ"
+                }
+            ]
+        },
+        {
+            "name": "Июнь",
+            "eventCount": 2,
+            "events": [
+                {
+                    "date": "1",
+                    "time": "09:00-12:00",
+                    "title": "KIDS EVENT",
+                    "features": [
+                        "Детские и подростковые развлечения"
+                    ],
+                    "img": "assets/img/calendar/9.png",
+                    "location": "",
+                    "link": "https://yandex.ru/maps/-/CHu-m4N5",
+                    "name_link": "записаться",
+                    "calendarLink": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=KIDS+EVENT&dates=20240601T060000Z/20240601T090000Z"
+                },
+                {
+                    "date": "7",
+                    "time": "13:00-20:00",
+                    "title": "ТИР",
+                    "features": [
+                        "Интерактивная лекция для детей и подростков"
+                    ],
+                    "img": "assets/img/calendar/10.png",
+                    "location": "",
+                    "link": "https://yandex.ru/maps/-/CHu-m4N5",
+                    "name_link": "записаться",
+                    "calendarLink": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=ТИР&dates=20240607T100000Z/20240607T170000Z"
+                }
+            ]
+        }
+    ]
+}

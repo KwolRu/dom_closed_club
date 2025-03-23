@@ -1,0 +1,51 @@
+.notification {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    border-right: 4px solid #ff4757;
+    min-width: 300px;
+}
+
+.notification.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.notification-title {
+    font-size: 22px;
+    color: var(--crimson);
+    margin-bottom: 5px;
+}
+
+.notification-message {
+    font-size: 16px;
+    color: var(--dark-gray);
+    margin: 0;
+}
+
+.notification.error {
+    border-left-color: var(--crimson);
+}
+
+.notification.success {
+    border-left-color: #2ed573;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+.notification.shake {
+    animation: shake 0.5s ease-in-out;
+}

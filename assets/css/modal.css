@@ -1,0 +1,181 @@
+/* Оверлей (фон за модальным окном) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none; /* Changed from opacity/pointer-events */
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+/* Когда оверлей открыт, даём ему класс .visible */
+.modal-overlay.visible {
+    opacity: 1;
+}
+
+/* Модальное окно */
+.modal {
+    position: relative;
+    background: url(/assets/img/illustrations/modal-back.png);
+    border-radius: 14px;
+    max-width: 650px;
+    width: 90%;
+    background-position: center;
+    background-size: cover;
+    padding: 60px;
+    transform: translateY(30px) scale(0.9);
+    transition: transform 0.4s ease;
+}
+
+/* Состояние открытого модального окна */
+.modal.show {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+/* Кнопка закрытия (иконка «×») */
+.modal-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Заголовок внутри модального окна */
+.modal-header {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    color: white;
+}
+
+/* Сетка карточек */
+.modal-card-grid {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-direction: column;
+}
+
+.modal-card {
+    background: #18040833;
+    border-radius: 8px;
+    padding: 10px;
+    color: #c2c2c2;
+    text-align: center;
+    /* cursor: pointer; */
+    backdrop-filter: blur(11px);
+    border: 1px solid #b9b9b94f;
+    font-size: 20px;
+    transition: background 0.3s ease;
+}
+
+.modal-card:hover {
+    background: #000000b3;
+}
+
+/* Медиа-запросы для адаптации */
+@media (max-width: 768px) {
+    .modal {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    .modal-header {
+        font-size: 1.1rem;
+    }
+
+    .modal-card-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 0.8rem;
+    }
+
+    .modal-card {
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal {
+        width: 98%;
+        padding: 1rem;
+    }
+
+    .modal-header {
+        font-size: 24px;
+        margin-bottom: 0.8rem;
+    }
+
+    .modal-card-grid {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 0.6rem;
+    }
+
+    .modal-card {
+        padding: 0.6rem;
+    }
+
+    .modal-close-btn {
+        top: 0.8rem;
+        right: 1rem;
+        font-size: 1.2rem;
+    }
+}
+
+#closePopupBtn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+#closePopupBtn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: rotate(180deg) scale(1.1);
+    border-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+#closePopupBtn::before,
+#closePopupBtn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+#closePopupBtn::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#closePopupBtn::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+#closePopupBtn:hover::before,
+#closePopupBtn:hover::after {
+    background: white;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    height: 22px;
+}
