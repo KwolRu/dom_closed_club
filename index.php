@@ -26,14 +26,24 @@ error_reporting(0);
 </head>
 
 <body>
-    <div class="loader">
-        <div class="loader-content">
-            <div class="loader-word">Мышление</div>
-            <div class="loader-word">Семья</div>
-            <div class="loader-word">Бизнес</div>
-            <div class="loader-word">Дружба</div>
+<div id="loader-overlay">
+    <div class="loader-container">
+        <div class="logo-loader">
+        <div class="loader-motivation">
+    <div>бизнес</div>
+    <div>баланс</div>
+    <div>окружение</div>
+    <div>вдохновение</div>
+</div>
+
+
         </div>
+        <div class="loader-progress">
+            <div class="loader-progress-bar" id="loader-progress-bar"></div>
+        </div>
+        <div class="loader-percentage" id="loader-percentage">0%</div>
     </div>
+</div>
 
     <header>
         <div class="container">
@@ -44,7 +54,7 @@ error_reporting(0);
                         <li data-scroll="main" class="active">Главная</li>
                         <li data-scroll="what-you-get">Что получишь</li>
                         <li data-scroll="events">Мероприятия</li>
-                        <a target="_blank" href="https://open.dom-club.com"><li>Открытая встреча</li></a>
+                        <!-- <a target="_blank" href="https://open.dom-club.com"><li>Открытая встреча</li></a> -->
                         <li data-scroll="tarifs">Тарифы</li>
                         <li data-scroll="contacts">Контакты</li>
                     </ul>
@@ -68,7 +78,7 @@ error_reporting(0);
             <li data-scroll="main">Главная</li>
             <li data-scroll="what-you-get">Что получишь</li>
             <li data-scroll="events">Мероприятия</li>
-            <a target="_blank" href="https://open.dom-club.com"><li>Открытая встреча</li></a>
+            <!-- <a target="_blank" href="https://open.dom-club.com"><li>Открытая встреча</li></a> -->
             <li data-scroll="tarifs">Тарифы</li>
             <li data-scroll="contacts">Контакты</li>
         </ul>
@@ -449,18 +459,12 @@ error_reporting(0);
             <img class="card-our" src="assets/img/card-our/1.png" alt="">
             <!-- Основной текст, который будет появляться -->
             <div class="card-text">
-                <div class="text-section">
-                    <span>Сила сообщества.</span>
-                    <p>Мы верим, что правильное окружение влияет на успех, и создаем атмосферу, где каждый резидент может развиваться.</p>
-                </div>
-                <div class="text-section">
-                    <span>Семья и баланс.</span>
-                    <p>Для нас важно не только достигать бизнес-целей, но и находить время для отдыха и своих близких.</p>
-                </div>
-                <div class="text-section">
-                    <span>Партнерство, доверие и развитие.</span>
-                    <p>Здесь вы находите не просто деловые связи, а надежных друзей, готовых поддержать ваши идеи.</p>
-                </div>
+            <div class="text-section">
+                <p>• Помогать людям проживать полноценную сбалансированную жизнь</p><br>
+                <p>• Объединить единомышленников по балансу бизнеса и семьи</p><br>
+                <p>• Помогать резидентам выделять время на развитие себя и своей семьи</p><br>
+                <p>• Помогать совмещать бизнес с семьей</p>
+            </div>
                 <div class="card-image">
                     <img src="assets/img/out-1.svg" alt="">
                 </div>
@@ -476,9 +480,11 @@ error_reporting(0);
             <img class="card-our" src="assets/img/card-our/2.png" alt="">
             <!-- Основной текст, который будет появляться -->
             <div class="card-text">
-                <div class="text-section">
-                    <p>Мы стремимся объединять людей с общими ценностями, создавая место, где каждый сможет получить поддержку, новые возможности для роста и качественный досуг. С нами вы развиваете не только бизнес через обмен опытом, но и находите друзей и единомышленников.</p>
-                </div>
+            <div class="text-section">
+                <p>• Создать самый большой семейный бизнес-клуб для предпринимателей</p><br>
+                <p>• Достичь показателей в 300 резидентов к осени 2025 года и 1000 резидентов к 2027 году</p><br>
+                <p>• Открыть представительство клуба в Москве к осени 2025 года и филиал клуба в Дубае к маю 2026 года</p>
+            </div>
                 <div class="card-image">
                     <img src="assets/img/out-2.svg" alt="">
                 </div>
@@ -494,9 +500,12 @@ error_reporting(0);
             <img class="card-our" src="assets/img/card-our/3.png" alt="">
             <!-- Основной текст, который будет появляться -->
             <div class="card-text">
-                <div class="text-section">
-                    <p>Мы создаем пространство, где каждый резидент чувствует себя частью большой семьи — получает поддержку, вдохновение и возможности для роста. «Dom» — это место, где работа и личная жизнь отлично дополняют друг друга, а доверие и партнерство помогают достигать ваших целей.
-                </div>
+            <div class="text-section">
+                <p>• Баланс</p><br>
+                <p>• Окружение</p><br>
+                <p>• Бизнес</p><br>
+                <p>• Вдохновение</p>
+            </div>
                 <div class="card-image">
                     <img src="assets/img/out-3.svg" alt="">
                 </div>
@@ -665,8 +674,9 @@ error_reporting(0);
                 </div>
                 <div class="nonormal">
                     <p class="description">
-                        <span>У нас предусмотрены разнообразные</span> <span>форматы для совместного отдыха,</span>
-                        <span>развития и укрепления семейных ценностей </span>
+                        <span>С нами вы больше не разрываетесь между работой и домом. </span> <br>
+                        <span>Ваши дети растут в правильном окружении, а семья становится не жертвой успеха, а его частью.  
+                        Здесь вы снова чувствуете вкус жизни.  </span>
                     </p>
                     <img src="assets/img/illustrations/shapeline.svg" alt="">
                 </div>
@@ -760,13 +770,22 @@ error_reporting(0);
         </div>
     </section>
     <section class="starter">
-        <img class="full-photo" src="assets/img/starter.png" alt="">
+        <img class="block-img desktop " src="assets/img/starter.png" alt="">
+        <img class="block-img mobile" src="assets/img/starter-m.png" alt="">
     </section>
     <section class="famaly">
         <div class="container ">
             <div class="flex-center">
 
                 <p class="title-famaly">KIDS CLUB</p>
+                
+                <div class="nonormal">
+                    <p class="description">
+                        <span>Мы предусмотрели разные форматы для совместного<br> отдыха, развития и укрепления семейных ценностей, для <br>того, чтобы наши резиденты проживали сбалансированную<br> полноценную жизнь</span> <br>
+                        <span>Ваши дети растут в правильном окружении, а семья становится не жертвой успеха, а его частью.  
+                        Здесь вы снова чувствуете вкус жизни.  </span>
+                    </p>
+                </div>
                 <div class="strange-cards">
                     <div class="strange-cards-flex">
                         <div class="strange-card-content b1-1">
@@ -872,33 +891,90 @@ error_reporting(0);
                         <span>Безопасность для наших</span> <span>резидентов на всех уровнях</span>
                     </h3>
                 </div>
-                <div class="flex">
-                    <div class="card-save">
-                        <img src="assets/img/our-1.svg" alt="">
-                        <p class="title">Адмиссия на входе</p>
-                        <div class="line"></div>
-                        <ul class="description">
-                            <li>Тщательная проверка кандидатов</li>
-                        </ul>
+                <div class="flex" id="securityCards">
+                    <div class="card-save" data-default-image="assets/img/o1.png" data-hover-image="assets/img/o1.png">
+                        <div class="card-bg"></div>
+                        <div class="card-content">
+                            <img src="assets/img/our-1.svg" alt="">
+                            <p class="title">Адмиссия на входе</p>
+                            <div class="line"></div>
+                            <ul class="description">
+                                <li>Тщательная проверка кандидатов</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="card-save">
-                        <img src="assets/img/our-2.svg" alt="">
-                        <p class="title">Контроль внутри</p>
-                        <div class="line"></div>
-                        <ul class="description">
-                            <li>комфорт и защита для резидентов</li>
-
-                        </ul>
+                    <div class="card-save" data-default-image="assets/img/o2.png" data-hover-image="assets/img/o2.png">
+                        <div class="card-bg"></div>
+                        <div class="card-content">
+                            <img src="assets/img/our-2.svg" alt="">
+                            <p class="title">Контроль внутри</p>
+                            <div class="line"></div>
+                            <ul class="description">
+                                <li>комфорт и защита для резидентов</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="card-save">
-                        <img src="assets/img/our-3.svg" alt="">
-                        <p class="title">Доверенная среда</p>
-                        <div class="line"></div>
-                        <ul class="description">
-                            <li>общение только с проверенными участниками</li>
-                        </ul>
+                    <div class="card-save" data-default-image="assets/img/o1.png" data-hover-image="assets/img/o3.png">
+                        <div class="card-bg"></div>
+                        <div class="card-content">
+                            <img src="assets/img/our-3.svg" alt="">
+                            <p class="title">Доверенная среда</p>
+                            <div class="line"></div>
+                            <ul class="description">
+                                <li>общение только с проверенными участниками</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+
+<style>
+.card-save {
+    position: relative;
+    overflow: hidden;
+}
+.card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+.card-content {
+    position: relative;
+    z-index: 2; /* Above the background */
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const securityCards = document.querySelectorAll('#securityCards .card-save');
+    
+    securityCards.forEach(card => {
+        // Get image URLs from data attributes
+        const hoverImage = card.getAttribute('data-hover-image');
+        
+        // Set background image on the background element
+        const bgElement = card.querySelector('.card-bg');
+        bgElement.style.backgroundImage = `url('${hoverImage}')`;
+        
+        // Add hover events
+        card.addEventListener('mouseenter', function() {
+            bgElement.style.opacity = 1;
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            bgElement.style.opacity = 0;
+        });
+    });
+});
+</script>
+
+                
 
 
             </div>
@@ -925,53 +1001,11 @@ error_reporting(0);
         </div> -->
     </section>
     <section class="slet">
-        <div class="container">
-            <div class="column-slet">
-                <div class="top-slet">
-                    <h3>СЛЁТ DOM</h3>
-                    <p>в Санкт-Петербурге</p>
-                </div>
-                <div class="bottom-slet">
-                    <p class="bottom-title">ОХТА ПАРК </p>
-                    <div class="flex-for-content-slet">
-                        <div class="content-slet">
-                            <img class="circle" src="assets/img/circle.svg" alt="">
-                            <p>хвойный лес</p>
-                        </div>
-                        <div class="content-slet">
-                            <img class="circle" src="assets/img/circle.svg" alt="">
-                            <p>ресторан</p>
-                        </div>
-                        <div class="content-slet">
-                            <img class="circle" src="assets/img/circle.svg" alt="">
-                            <p>10 км от городов</p>
-                        </div>
-                        <div class="content-slet">
-                            <img class="circle" src="assets/img/circle.svg" alt="">
-                            <p>спа-комплекс</p>
-                        </div>
-                        <div class="content-slet">
-                            <img class="circle" src="assets/img/circle.svg" alt="">
-                            <p>детский клуб</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="column-slet column-slet-right">
-                <div class="top-slet">
-                    <div class="date">
-                        <p class="date">7—8 июля</p>
-                        <img src="assets/img/illustrations/arrow.svg" alt="">
-
-                    </div>
-
-                    <p>2025 года</p>
-                </div>
-                <div class="bottom-slet">
+        <img src="assets/img/1.png" alt=""> 
+        <div class="bottom-slet">
                     <a class="btn-primary" target="_blank" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=СЛЁТ+DOM&dates=20250707T100000Z/20250708T180000Z&details=Dom+Club+-+Закрытый+клуб+для+предпринимателей+и+C-level+руководителей.+Слёт+в+Охта+Парке,+Санкт-Петербург&location=Охта+Парк">Добавить в календарь</a>
 
-                </div>
-            </div>
+                </div>   
     </section>
     <section class="lid" id="contacts">
         <div class="container">

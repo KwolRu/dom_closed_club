@@ -213,9 +213,10 @@
 }
     .cards-our-team {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
+        flex-wrap: nowrap;
         padding-top: 0;
+        align-items: center;
     }
 
     .card-descor .content {
@@ -259,6 +260,7 @@
         flex-direction: column;
         flex-wrap: wrap;
         padding-top: 0;
+        align-items: center;
     }
     .strange-cards {
         display: flex;
@@ -275,12 +277,12 @@
         display: none;
     }
     section.slet {
-        height: 110vh;
-        background: url(/assets/img/back-slet-mobile.png);
+        /* height: 110vh; */
+        /* background: url(/assets/img/back-slet-mobile.png); */
         background-size: cover;
         background-position: center right;
         background-repeat: no-repeat;
-        min-height: 110vh;
+        /* min-height: 110vh; */
         height: auto;
     }
     .forech {
@@ -455,9 +457,9 @@ section.saving {
     }
 
     section.slet {
-        height: 100%;
-        min-height: 100vh;
-        padding: 40px 0;
+        /* height: 100%; */
+        /* min-height: 100vh; */
+        /* padding: 40px 0; */
     }
 
     .slet .container {
