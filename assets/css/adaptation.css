@@ -2,9 +2,9 @@
     .container {
         margin: 0 auto;
         max-width: 1920px;
-        /* height: auto; */
         margin: 0px 40px;
     }
+
     .b-main .container {
         margin: 0px 40px;
     }
@@ -14,12 +14,13 @@
     .container {
         margin: 0 auto;
         max-width: 1920px;
-        /* height: auto; */
         margin: 0px 40px;
     }
-.tarif .card {
-    /* height:1200px; */
-}
+
+    .tarif .card {
+        height: 800px;
+    }
+
     a.logo img {
         width: 150px;
     }
@@ -35,7 +36,6 @@
 
     .menu-toggle {
         display: block;
-        /* Default hidden, shown for smaller screens */
         cursor: pointer;
     }
 
@@ -50,7 +50,6 @@
     .sidebar {
         position: fixed;
         top: 0;
-        /* left: -100%; */
         width: 100%;
         max-width: 100%;
         height: 100vh;
@@ -94,7 +93,6 @@
         font-size: 32px;
     }
 
-
     .dsh.active {
         color: red;
     }
@@ -120,21 +118,18 @@
         font-size: 16px;
         padding: 12px 12px;
     }
-
 }
+
 @media (max-width: 1400px) {
     .tarif .card {
-    height: auto;
-    width: 100%;
+        height: 1040px;
+        width: 480px;
+    }
 }
-}
+
 @media (max-width: 1200px) {
-    
-
-
     .menu-toggle {
         display: block;
-        /* Default hidden, shown for smaller screens */
     }
 
     h1 {
@@ -165,10 +160,11 @@
     nav {
         display: none;
     }
+
     .gap-10 {
         gap: 60px;
     }
-    /* Form adaptations */
+
     #mainJoinForm {
         flex-direction: column;
         gap: 10px;
@@ -207,10 +203,12 @@
         visibility: hidden;
         align-content: space-between;
     }
-.how-you-have {
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-}
+
+    .how-you-have {
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
     .cards-our-team {
         display: flex;
         flex-direction: column;
@@ -230,17 +228,17 @@
         flex-direction: column;
         width: 100%;
         padding: 20px;
-        /* background: var(--dark); */
-        /* color: white; */
         gap: 0px;
         height: auto;
         min-height: min-content;
         flex-wrap: nowrap;
     }
-    .tarif .front-card .title{
-        font-size: 68px;
-    }
 
+    .tarif .front-card .title {}
+}
+
+.center {
+    font-size: 24px;
 }
 
 @media (max-width: 768px) {
@@ -255,6 +253,11 @@
         position: relative;
         top: auto;
     }
+
+    .footer p {
+        font-size: 22px;
+    }
+
     .cards-our-team {
         display: flex;
         flex-direction: column;
@@ -262,6 +265,7 @@
         padding-top: 0;
         align-items: center;
     }
+
     .strange-cards {
         display: flex;
         flex-direction: column;
@@ -269,22 +273,20 @@
 
     .strange-card-content.b1-2,
     .strange-card-content.b2-1,
-    .strange-card-content.b3-2 {
-        /* height: 220px; */
-    }
+    .strange-card-content.b3-2 {}
+
     .nonormal img {
         width: 100%;
         display: none;
     }
+
     section.slet {
-        /* height: 110vh; */
-        /* background: url(/assets/img/back-slet-mobile.png); */
         background-size: cover;
         background-position: center right;
         background-repeat: no-repeat;
-        /* min-height: 110vh; */
         height: auto;
     }
+
     .forech {
         display: grid;
         gap: 6px;
@@ -297,10 +299,11 @@
         visibility: hidden;
         align-content: space-between;
     }
-section.saving {
-    padding: 50px 0px;
 
-}
+    section.saving {
+        padding: 50px 0px;
+    }
+
     .strange-card-content {
         position: relative;
         width: 100%;
@@ -335,7 +338,6 @@ section.saving {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        /* gap: 30px; */
         padding: 40px 0;
     }
 
@@ -368,8 +370,7 @@ section.saving {
     }
 
     .tarif {
-        width: 100%;
-        /* overflow: hidden; */
+        width: 65%;
     }
 
     .tarif .swiper-container {
@@ -380,11 +381,12 @@ section.saving {
     .tarif .swiper-slide {
         width: 100%;
         margin-right: 20px;
+        display: flex;
     }
 
     .tarif .card {
-        width: 100%;
         margin: 0;
+        scale: 0.8;
     }
 
     .tarif-navigation {
@@ -456,11 +458,7 @@ section.saving {
         align-items: center;
     }
 
-    section.slet {
-        /* height: 100%; */
-        /* min-height: 100vh; */
-        /* padding: 40px 0; */
-    }
+    section.slet {}
 
     .slet .container {
         flex-direction: column-reverse;
@@ -514,18 +512,15 @@ section.saving {
         height: auto;
         position: relative;
     }
-.column-slet-right .bottom-slet{
-    
-position: absolute;
-    
-bottom: -86vh;
-}
+
+    .column-slet-right .bottom-slet {
+        position: absolute;
+        bottom: -86vh;
+    }
+
     .column-slet-right .top-slet {
-
         display: flex;
-
         flex-direction: row;
-
         width: 100%;
     }
 
@@ -565,19 +560,18 @@ bottom: -86vh;
         text-align: center;
     }
 
-.strange-card-content .titile {
-    font-size: 28px;
-    color: var(--crimson);
-    line-height: 32px;
-    text-align: left;
-    padding: 20px;
-}
+    .strange-card-content .titile {
+        font-size: 28px;
+        color: var(--crimson);
+        line-height: 32px;
+        text-align: left;
+        padding: 20px;
+    }
 }
 
 @media (max-width: 576px) {
     .container {
         max-width: 100%;
-        /* padding: 0 15px; */
         margin: 0px 20px;
     }
 
@@ -589,7 +583,6 @@ bottom: -86vh;
         justify-content: center;
         width: auto;
     }
-
 
     .flex {
         display: flex;
@@ -623,11 +616,8 @@ bottom: -86vh;
         display: block;
         font-weight: 100;
         letter-spacing: -1px;
-        /* flex-direction: column; */
-        /* flex-wrap: wrap; */
         top: 0;
     }
-
 
     a.logo {
         max-width: 50%;
@@ -654,7 +644,6 @@ bottom: -86vh;
         width: 100%;
     }
 
-
     .b-main .flex-center {
         height: 80%;
         display: flex;
@@ -678,15 +667,12 @@ bottom: -86vh;
         justify-content: flex-start;
         align-items: center;
         gap: 60px;
-        /* margin-top: 60px; */
         width: 100%;
         flex-wrap: wrap;
     }
 
     .flex.column.title {
-
         display: flex;
-
         flex-direction: column;
     }
 
@@ -697,8 +683,6 @@ bottom: -86vh;
         justify-content: center;
         flex-direction: row;
     }
-
-
 
     .bottom {
         padding: 20px;
@@ -714,7 +698,6 @@ bottom: -86vh;
         perspective: 1000px;
         transition: opacity 0.5s ease-out, transform 0.5s ease-out;
         margin: -1px -1px;
-        /* background: white; */
         width: 50%;
     }
 
@@ -737,9 +720,6 @@ bottom: -86vh;
         display: none;
     }
 
-
-
-    /* Card and section adaptations */
     .cards-our-team .card {
         width: 100%;
         margin: 10px 0;
@@ -747,11 +727,8 @@ bottom: -86vh;
         margin-top: 0;
     }
 
-    .text-section {
-        /* padding: 16px; */
-    }
+    .text-section {}
 
-    /* Events section */
     .afisha {
         padding: 0px;
         display: flex;
@@ -768,21 +745,17 @@ bottom: -86vh;
         justify-content: space-between;
     }
 
-
-
     .ivent {
-        /* width: calc(50% - 2px); */
-        /* margin: 8px 0; */
         border-bottom: 2px solid var(--dark-gray);
     }
 
-    /* Residents section */
     .residents .swiper-container {
         padding: 0 16px;
     }
 
     .swiper-slide {
-        width: 100% !important;
+        margin-right: 0 !important;
+        height: auto !important;
     }
 
     .resident-video {
@@ -790,7 +763,6 @@ bottom: -86vh;
         height: auto;
     }
 
-    /* Founder section */
     .founder .flex-center {
         flex-direction: column;
         gap: 24px;
@@ -806,7 +778,6 @@ bottom: -86vh;
         width: 100%;
     }
 
-    /* Tariffs section */
     .tarif .card {
         width: 100%;
         margin: 16px 0;
@@ -817,7 +788,6 @@ bottom: -86vh;
         padding: 16px;
     }
 
-    /* Footer adaptations */
     .footer {
         padding: 32px 0;
     }
@@ -827,29 +797,33 @@ bottom: -86vh;
         flex-direction: column;
         gap: 24px;
     }
-.nonormal p.description {
-    font-size: 26px;
-    line-height:26px;
-    display: flex;
-    flex-direction: column;
-    color: #8c8c8c;
-}
+
+    .nonormal p.description {
+        font-size: 26px;
+        line-height: 26px;
+        display: flex;
+        flex-direction: column;
+        color: #8c8c8c;
+    }
+
     .footer-item {
         width: 100%;
         text-align: center;
     }
-    .nonormal{
+
+    .nonormal {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
-.famaly h3 {
-    font-size: 50px;
-    line-height: 50px;
-    font-weight: 100;
-    letter-spacing: -1px;
-}
-    /* Typography adjustments */
+
+    .famaly h3 {
+        font-size: 50px;
+        line-height: 50px;
+        font-weight: 100;
+        letter-spacing: -1px;
+    }
+
     h3 {
         font-size: 24px;
         line-height: 28px;
@@ -899,8 +873,6 @@ bottom: -86vh;
         font-size: 22px;
         line-height: 22px;
         font-weight: 100;
-        /* letter-spacing: -1px; */
-        /* max-width: 700px; */
     }
 
     p {
@@ -928,7 +900,6 @@ bottom: -86vh;
 
     .card-descor img {
         height: 14px;
-        /* filter: invert(1); */
     }
 
     .content {
@@ -967,7 +938,6 @@ bottom: -86vh;
         min-height: auto;
         height: auto;
         width: auto;
-        /* background: var(--light-gray); */
         padding: 32px;
         border: 1px solid #ffffff;
     }
@@ -975,7 +945,6 @@ bottom: -86vh;
     .ivent img {
         padding: 0px;
         width: 10px;
-        /* width: 100%; */
     }
 
     img.event-img {
@@ -987,7 +956,6 @@ bottom: -86vh;
         font-size: 14px;
     }
 
-    /* Additional spacing and layout fixes */
     .flex-center {
         gap: 24px;
     }
@@ -1002,7 +970,6 @@ bottom: -86vh;
         padding: 8px 0;
     }
 
-    /* Form inputs mobile optimization */
     .input-container {
         width: 100%;
     }
@@ -1010,11 +977,9 @@ bottom: -86vh;
     input,
     textarea {
         font-size: 16px;
-        /* Prevents iOS zoom on focus */
         padding: 12px;
     }
 
-    /* Button sizing and spacing */
     .btn-primary {
         width: 100%;
         margin: 8px 0;
@@ -1022,14 +987,12 @@ bottom: -86vh;
         max-width: 100%;
     }
 
-    /* Navigation buttons */
     .custom-navigation {
         width: 100%;
         justify-content: space-between;
         padding: 16px 0;
     }
 
-    /* Card animations optimization for mobile */
     .flip-card {
         transform-style: preserve-3d;
         transition: transform 0.6s;
@@ -1062,12 +1025,10 @@ bottom: -86vh;
         font-weight: 100;
     }
 
-    /* Improve touch targets */
     nav li,
     .btn-primary,
     .custom-button {
         min-height: 44px;
-        /* Apple's recommended minimum touch target size */
     }
 
     .event .btn-primary {
@@ -1156,8 +1117,6 @@ bottom: -86vh;
         background-size: cover;
         height: auto;
         background-position: top;
-        /* color: var(--white); */
-        /* background: var(--dark); */
         background-repeat: no-repeat;
         padding-bottom: 100px;
     }
@@ -1192,10 +1151,8 @@ bottom: -86vh;
         }
     }
 
-    /* Create a smooth infinite loop by duplicating content */
     .regalia ul:hover {
         animation-play-state: paused;
-
     }
 
     .regalia ul {
@@ -1206,15 +1163,13 @@ bottom: -86vh;
         width: 720px;
     }
 
-    /* Ensure container hides overflow */
     .regalia {
         overflow: hidden;
         width: 100%;
     }
 
     .tarif-slider-container {
-        /* display: none; */
-        /* width: 100%; */
+        width: 100%;
     }
 
     .card-text {
@@ -1224,9 +1179,6 @@ bottom: -86vh;
     .card:hover .card-text .text-section {
         font-size: 30px;
     }
-
-
-
 
     .join-btn {
         margin-top: 40px;
@@ -1255,56 +1207,34 @@ bottom: -86vh;
         height: auto;
     }
 
-    /* Tariff Card Styles */
-
     .tarifs {
         background-color: black;
-        /* padding-bottom: 100px; */
         height: auto;
+        padding: 20px 0px;
     }
-
 
     .tarif {
         display: flex;
         gap: 20px;
         perspective: 1000px;
         width: 100%;
-        /* margin: -90px 0px; */
         flex-direction: column;
     }
 
     .tarif .card {
-        /* background-color: transparent; */
-        /* width: 300px; */
-        /* height: 1000px; */
-        /* position: relative; */
+        height: 1030px;
         transform-style: preserve-3d;
         transition: transform 0.8s;
-        /* cursor: pointer; */
-        /* border-radius: 16px; */
         backdrop-filter: blur(12px);
-        /* opacity: 0; */
-        /* transform: translateY(50px); */
         transition: opacity 0.8s ease, transform 0.8s ease;
-        /* height: 1180px; */
-        /* width: 33%; */
-        /* background: none; */
         border: 1px solid var(--gray);
         transform-style: preserve-3d;
         transition: transform 0.8s;
     }
 
-    .tarif .card.loaded {
-        /* opacity: 1; */
-        /* transform: translateY(0); */
-        /* display: flex; */
-        /* flex-direction: row; */
-    }
+    .tarif .card.loaded {}
 
-    /* Удаляем CSS для переворота карточек при наведении */
-    .tarif .card:hover:not(.flipped) {
-        /* transform: none; */
-    }
+    .tarif .card:hover:not(.flipped) {}
 
     .tarif .card.flipped {
         transform: none;
@@ -1337,7 +1267,6 @@ bottom: -86vh;
 
     .tarif .back-card {
         background: var(--dark);
-        color: var(--dark);
         transform: rotateY(180deg);
         display: flex;
         flex-direction: column;
@@ -1359,26 +1288,30 @@ bottom: -86vh;
     }
 
     .tarif .title {
-        font-size: 48px;
+        font-size: 38px;
         text-align: center;
-        padding: 30px;
+        display: flex;
+        justify-content: flex-start;
     }
-.tarif ul {
-    list-style: decimal;
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-    font-size: 18px;
-    padding-left: 40px;
-    padding-bottom: 50px;
-}
+
+    .tarif ul {
+        list-style: decimal;
+        display: flex;
+        gap: 6px;
+        flex-direction: column;
+        font-size: 24px;
+        padding-left: 40px;
+        padding-bottom: 50px;
+        padding-top: 20px;
+    }
+
     .tarif .footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-top: 1px solid var(--stroke);
         padding-top: 20px;
         flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .tarif .list ul {
@@ -1394,7 +1327,6 @@ bottom: -86vh;
         gap: 10px;
         font-size: 16px;
     }
-
 
     .tarif .list .marker {
         background-image: url(../img/illustrations/marker.svg);
@@ -1414,7 +1346,7 @@ bottom: -86vh;
 
     .tarif .header {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         justify-content: space-between;
     }
 
@@ -1432,11 +1364,12 @@ bottom: -86vh;
 
     .tarif .description {
         text-align: left;
-        font-size: 22px;
-        /* color: var(--crimson); */
-        /* color: var(--gray); */
+        font-size: 18px;
         border-bottom: 1px solid white;
-        padding: 10px 0px;
+        padding: 20px 0px;
+        display: flex;
+        gap: 20px;
+        flex-direction: row;
     }
 
     .line-for-price {
@@ -1450,49 +1383,28 @@ bottom: -86vh;
         white-space: nowrap;
     }
 
-    /* Анимация для карточки тарифов */
     .tarif .card {
-        /* opacity: 0; */
-        /* transform: translateY(50px); */
-        /* transition: opacity 0.8s ease, transform 0.8s ease; */
-        /* height: 830px; */
-        /* width: 33%; */
-        /* background: none; */
         border: 1px solid #ACACAC;
         transform-style: preserve-3d;
         transition: transform 0.8s;
     }
 
     .tarif .card.loaded {
-        opacity: 1;
-        /* transform: translateY(0); */
-        /* display: flex; */
-        /* flex-direction: column; */
-        /* width: 100%; */
-        padding: 30px 30px;
-        color: white;
-        background: #ffffff15;
+        margin-top: -100px;
     }
 
-    /* Начальное состояние для back-card тарифов */
     .tarif .card .back-card {
         transform: rotateY(180deg);
         transition: transform 0.5s ease;
-        background: white;
-        /* height: auto; */
         width: 100%;
     }
 
-    /* При наведении: карточка переворачивается */
-    .tarif .card:hover {
-        /* transform: rotateY(180deg); */
-    }
+    .tarif .card:hover {}
 
     .tarif .card:hover .front-card {
         transform: rotateY(0);
     }
 
-    /* При наведении: левая часть уходит, правая появляется */
     .tarif .card:hover .front-card {
         transform: translateX(-100%);
         transition: transform 0.5s ease;
@@ -1505,7 +1417,6 @@ bottom: -86vh;
         flex-direction: column;
     }
 
-
     .tarif .back-card .illustartion img {
         width: 50px;
         height: auto;
@@ -1515,9 +1426,7 @@ bottom: -86vh;
         font-size: 32px;
     }
 
-    .tarif .front-card .title {
-        transform: translateY(-80px);
-    }
+    .tarif .front-card .title {}
 
     .tarif .sublist li {
         display: flex;
@@ -1530,33 +1439,18 @@ bottom: -86vh;
     }
 
     .tarif .back-card .footer {
-
-color: var(--black);
-
-display: flex;
-
-flex-direction: column;
-
-align-items: flex-start;
-
-gap: 20px;
-
-bottom: 0;
-
-position: inherit;
-
-width: calc(100% - 60px);
-
-bottom: 0px;
-
-/* position: relative; */
-
-/* width: 100%; */
-
-}
+        color: var(--black);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        bottom: 0;
+        position: inherit;
+        width: calc(100% - 60px);
+        bottom: 0px;
+    }
 
     .tarif .front-card .footer {
-
         color: var(--white);
     }
 
@@ -1574,7 +1468,8 @@ bottom: 0px;
         align-items: center;
         flex-wrap: wrap;
         gap: 10px;
-        font-size: 40px;
+        width: 100%;
+        font-size: 28px;
     }
 
     .back-card .line-for-price {
@@ -1589,7 +1484,6 @@ bottom: 0px;
         position: absolute;
         width: 100%;
         height: auto;
-        /* font-size: 32px; */
         min-height: 100%;
     }
 
@@ -1600,7 +1494,4 @@ bottom: 0px;
     .sidebar {
         display: block;
     }
-
-
-
 }

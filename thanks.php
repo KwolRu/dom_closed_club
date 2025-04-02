@@ -38,14 +38,14 @@
                 </div>
                 <div class="images-circle">
                     <div class="flex cuqer">
-                        <img src="assets/img/circle-photo/1.png" alt="1">
-                        <img src="assets/img/circle-photo/2.png" alt="1">
-                        <img src="assets/img/circle-photo/3.png" alt="1">
-                        <img src="assets/img/circle-photo/4.png" alt="1">
-                        <img src="assets/img/circle-photo/5.png" alt="1">
-                        <img src="assets/img/circle-photo/6.png" alt="1">
-                        <img src="assets/img/circle-photo/7.png" alt="1">
-                        <img class="last" src="assets/img/circle-photo/0.png" alt="1">
+                        <img src="assets/img/circle-photo/1.webp" alt="1">
+                        <img src="assets/img/circle-photo/2.webp" alt="1">
+                        <img src="assets/img/circle-photo/3.webp" alt="1">
+                        <img src="assets/img/circle-photo/4.webp" alt="1">
+                        <img src="assets/img/circle-photo/5.webp" alt="1">
+                        <img src="assets/img/circle-photo/6.webp" alt="1">
+                        <img src="assets/img/circle-photo/7.webp" alt="1">
+                        <img class="last" src="assets/img/circle-photo/0.webp" alt="1">
 
                     </div>
                     <p class="right-text">Резидентов в Москве и по всей России</p>

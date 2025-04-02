@@ -11,7 +11,7 @@
                     "features": [
                         "Смотреть программу открытой встречи"
                     ],
-                    "img": "assets/img/calendar/1.png",
+                    "img": "assets/img/calendar/1.webp",
                     "location": "КИБЕРДОМ",
                     "link": "https://yandex.ru/maps/-/CHu-m4N5",
                     "calendarLink": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Открытая+встреча&dates=20240324T100000Z/20240324T170000Z&location=КИБЕРДОМ"
@@ -23,7 +23,7 @@
                     "features": [
                         "Спортивное мероприятие"
                     ],
-                    "img": "assets/img/calendar/2.png",
+                    "img": "assets/img/calendar/2.webp",
                     "location": "",
                     "link": "https://yandex.ru/maps/-/CHu-m4N5",
                     "name_link": "записаться",
@@ -42,7 +42,7 @@
                     "features": [
                         "Утро успеха и продуктивности"
                     ],
-                    "img": "assets/img/calendar/3.png",
+                    "img": "assets/img/calendar/3.webp",
                     "location": "",
                     "link": "https://yandex.ru/maps/-/CHu-m4N5",
                     "name_link": "записаться",
@@ -55,7 +55,7 @@
                     "features": [
                         "Тренинг в МСК Сити для детей и подростков"
                     ],
-                    "img": "assets/img/calendar/4.png",
+                    "img": "assets/img/calendar/4.webp",
                     "location": "",
                     "link": "https://yandex.ru/maps/-/CHu-m4N5",
                     "name_link": "записаться",
@@ -68,7 +68,7 @@
                     "features": [
                         "Смотреть программу открытой встречи"
                     ],
-                    "img": "assets/img/calendar/5.png",
+                    "img": "assets/img/calendar/5.webp",
                     "location": "",
                     "link": "https://yandex.ru/maps/-/CHu-m4N5",
                     "name_link": "локация",
@@ -87,7 +87,7 @@
                     "features": [
                         "Мероприятие для развития финансовой и грамотности детей"
                     ],
-                    "img": "assets/img/calendar/6.png",
+                    "img": "assets/img/calendar/6.webp",
                     "location": "",
                     "link": "https://yandex.ru/maps/-/CHu-m4N5",
                     "name_link": "записаться",
@@ -100,7 +100,7 @@
                     "features": [
                         "Интерактивная лекция для детей и подростков"
                     ],
-                    "img": "assets/img/calendar/7.png",
+                    "img": "assets/img/calendar/7.webp",
                     "location": "",
                     "link": "https://yandex.ru/maps/-/CHu-m4N5",
                     "name_link": "записаться",
@@ -113,7 +113,7 @@
                     "features": [
                         "Смотреть программу открытой встречи"
                     ],
-                    "img": "assets/img/calendar/8.png",
+                    "img": "assets/img/calendar/8.webp",
                     "location": "КИБЕРДОМ",
                     "calendarLink": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=ОТКРЫТАЯ+ВСТРЕЧА&dates=20240524T090000Z/20240524T120000Z&location=КИБЕРДОМ"
                 }
@@ -130,7 +130,7 @@
                     "features": [
                         "Детские и подростковые развлечения"
                     ],
-                    "img": "assets/img/calendar/9.png",
+                    "img": "assets/img/calendar/9.webp",
                     "location": "",
                     "link": "https://yandex.ru/maps/-/CHu-m4N5",
                     "name_link": "записаться",
@@ -143,7 +143,7 @@
                     "features": [
                         "Интерактивная лекция для детей и подростков"
                     ],
-                    "img": "assets/img/calendar/10.png",
+                    "img": "assets/img/calendar/10.webp",
                     "location": "",
                     "link": "https://yandex.ru/maps/-/CHu-m4N5",
                     "name_link": "записаться",

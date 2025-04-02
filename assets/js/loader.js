@@ -12,14 +12,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check if mobile device for timing adjustments
     const isMobile = window.innerWidth <= 768;
     
-    // Ultra-smooth loading calculation (Apple-style)
-    const baseSpeed = isMobile ? 45 : 40; // Slightly faster on mobile
-    const initialDelay = isMobile ? 200 : 300; // Shorter delay on mobile
+    // Ultra-smooth loading calculation (Apple-style) - FASTER SPEEDS
+    const baseSpeed = isMobile ? 85 : 75; // Increased speed values
+    const initialDelay = isMobile ? 100 : 150; // Reduced initial delays
     let hasStarted = false;
     
     // Animate the motivation lines sequentially - adjusted for mobile
     function animateMotivationLines() {
-        const staggerDelay = isMobile ? 500 : 700; // Faster animation for mobile
+        const staggerDelay = isMobile ? 250 : 350; // Reduced delay for faster animations
         
         lineLoaders.forEach((line, index) => {
             setTimeout(() => {
@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Start the animation of motivation lines
-    setTimeout(animateMotivationLines, isMobile ? 300 : 500);
+    // Start the animation of motivation lines - reduced delay
+    setTimeout(animateMotivationLines, isMobile ? 150 : 250);
     
     // Very smooth progress animation
     function updateProgress(timestamp) {
@@ -45,9 +45,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const elapsed = timestamp - lastTimestamp;
         lastTimestamp = timestamp;
         
-        // Calculate a silky-smooth progress rate that slows down naturally
+        // Calculate a silky-smooth progress rate that slows down less
         const remainingProgress = 100 - loadProgress;
-        const progressRate = baseSpeed * Math.pow(remainingProgress / 100, 0.8); // Gentle deceleration
+        const progressRate = baseSpeed * Math.pow(remainingProgress / 100, 0.6); // Less deceleration (0.8 to 0.6)
         
         // Apply micro-increment based on elapsed time
         const increment = (progressRate * elapsed) / 1000;
@@ -57,8 +57,12 @@ document.addEventListener('DOMContentLoaded', function() {
             loadProgress = Math.min(loadProgress, 99);
             
             // Update progress bar with the ultra-smooth transition set in CSS
-            progressBar.style.width = loadProgress + '%';
-            
+            if (isMobile) {
+                progressBar.style.height = loadProgress + '%';
+            } else {
+                progressBar.style.width = loadProgress + '%';
+            }
+
             // Update percentage text without animation
             updatePercentageText(Math.floor(loadProgress));
             
@@ -75,21 +79,26 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Start the animation after a short delay
+    // Start the animation with reduced delay
     setTimeout(() => {
         requestAnimationFrame(updateProgress);
-    }, isMobile ? 50 : 100);
+    }, isMobile ? 25 : 50);
     
     // When page is fully loaded, complete to 100%
     window.addEventListener('load', function() {
-        // Ensure at least 2-2.5 seconds of loading experience (shorter on mobile)
-        const minimumLoadingTime = isMobile ? 2000 : 2500; 
+        // Shorter minimum loading time
+        const minimumLoadingTime = isMobile ? 1000 : 1200; 
         const loadStartTime = performance.now();
         
         const finishLoading = function() {
             // Apply the final progress with the smooth transition from CSS
             loadProgress = 100;
-            progressBar.style.width = '100%';
+            if (isMobile) {
+                progressBar.style.height = '100%';
+            } else {
+                progressBar.style.width = '100%';
+
+            }
             updatePercentageText(100);
             
             // Make sure all motivation lines are fully filled
@@ -112,14 +121,14 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function completeLoading() {
         document.body.classList.add('loaded');
-        
-        // Fade out the loader with a longer, smoother transition
+
+        // Fade out the loader with a shorter transition
         loaderOverlay.style.opacity = 0;
-        
-        // After transition effect, remove the loader completely
+
+        // Reduced timeout for hiding the loader
         setTimeout(function() {
             loaderOverlay.style.display = 'none';
-        }, 1000);
+        }, 600);
     }
     
     // Handle orientation changes

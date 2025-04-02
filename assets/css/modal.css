@@ -22,7 +22,7 @@
 /* Модальное окно */
 .modal {
     position: relative;
-    background: url(/assets/img/illustrations/modal-back.png);
+    background: url(/assets/img/illustrations/modal-back.webp);
     border-radius: 14px;
     max-width: 650px;
     width: 90%;

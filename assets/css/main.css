@@ -224,7 +224,7 @@ section {
 }
 
 .b-main {
-    background-image: url('../img/main_back.png');
+    background-image: url('../img/main_back.webp');
     /* background-size: cover; */
     /* background-position: center; */
     height: 100%;
@@ -236,7 +236,7 @@ section {
 }
 
 .founder {
-    background-image: url('../img/founder.png');
+    background-image: url('../img/founder.webp');
     background-size: cover;
     height: 100%;
     background-position: top;
@@ -677,8 +677,8 @@ a.link img {
     display: none;
 }
 .tarif-slider-nav {
-    position: relative;
-    top: -50px;
+    position: absolute;
+    bottom: -15px;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -714,7 +714,7 @@ a.link img {
 .card {
     position: relative;
     flex: 1;
-    min-width: 360px;
+    width: 660px;
     height: 85vh;
     margin: 0;
     overflow: hidden;
@@ -733,7 +733,7 @@ a.link img {
     position: absolute;
     padding: 40px;
     margin: 0;
-    font-size: 78px;
+    font-size: 58px;
     color: #fff;
     z-index: 2;
     transition: font-size 0.5s ease, transform 0.5s ease;
@@ -1320,7 +1320,7 @@ p.botom-desc {
 
 section.saving {
     padding: 209px 0px;
-    background: url(/assets/img/whowe.png);
+    background: url(/assets/img/whowe.webp);
     color: white;
     background-size: cover;
 }
@@ -1599,7 +1599,7 @@ section.famaly {
 
 section.slet {
     height: 110vh;
-    /* background: url(/assets/img/back-slet.png); */
+    /* background: url(/assets/img/back-slet.webp); */
     background-size: cover;
     background-position: center right;
     background-repeat: no-repeat;
@@ -1734,33 +1734,33 @@ img.circle {
 }
 
 .fbi-1 {
-    background-image: url(/assets/img/fbi-1.png);
+    background-image: url(/assets/img/fbi-1.webp);
 }
 
 .fbi-2 {
-    background-image: url(/assets/img/fbi-2.png);
+    background-image: url(/assets/img/fbi-2.webp);
 }
 
 .fbi-3 {
-    background-image: url(/assets/img/fbi-3.png);
+    background-image: url(/assets/img/fbi-3.webp);
 }
 
 .fbi-4 {
-    background-image: url(/assets/img/fbi-4.png);
+    background-image: url(/assets/img/fbi-4.webp);
 }
 .fbi-4-4 {
-    background-image: url(/assets/img/fbi-4-4.png);
+    background-image: url(/assets/img/fbi-4-4.webp);
 }
 
 .fbi-5 {
-    background-image: url(/assets/img/fbi-5.png);
+    background-image: url(/assets/img/fbi-5.webp);
 }
 
 .fbi-6 {
-    background-image: url(/assets/img/fbi-6.png);
+    background-image: url(/assets/img/fbi-6.webp);
 }
 .fbi-6-6 {
-    background-image: url(/assets/img/fbi-6-6.png);
+    background-image: url(/assets/img/fbi-6-6.webp);
 }
 
 a {
@@ -1775,9 +1775,9 @@ a {
 .tarif ul {
     list-style: decimal;
     display: flex;
-    gap: 10px;
+    gap: 5px;
     flex-direction: column;
-    font-size: 33px;
+    font-size: 30px;
     padding-left: 40px;
 }
 
@@ -1795,12 +1795,12 @@ span.duration {
 .tarifs li {
     list-style: disc;
     /* list-style-position: inside; */
+    line-height: 1;
 }
 
 .tarifs li::marker {
     color: #e81840;
-    font-size: 44px;
-
+    font-size: 38px;
 }
 .color-red{
     color: #e81840;
@@ -1813,7 +1813,7 @@ span.duration {
 .bottom-slet {
     justify-items: right;
     position: relative;
-    top: -180px;
+    top: -200px;
     right: 2%;
 }  
 .card-save:hover .card-content {

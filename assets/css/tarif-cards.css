@@ -1,63 +1,30 @@
-/* Tariff Card Styles */
-
-.tarifs{
+.tarifs {
     background-color: black;
     padding-bottom: 200px;
     height: auto;
-    /* padding-top: 200px; */
     overflow: hidden;
-    background-image: url(/assets/img/tarifs.png);
+    background-image: url(/assets/img/tarifs.webp);
     background-size: 100%;
-    /* width: 80%; */
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
 }
-
 
 .tarif {
     display: flex;
     gap: 20px;
     perspective: 1000px;
     width: 100%;
-    /* margin: -130px 0px; */
-    /* overflow: hidden; */
-    width: 80%;
+    /* width: 100%; */
     align-self: center;
 }
 
 .tarif .card {
-    /* background-color: transparent; */
-    /* width: 300px; */
-    /* height: 1000px; */
-    /* position: relative; */
-    /* transform-style: preserve-3d; */
-    /* transition: transform 0.8s; */
-    /* cursor: pointer; */
-    /* border-radius: 16px; */
     backdrop-filter: blur(22px);
-    /* opacity: 0; */
-    /* transform: translateY(50px); */
     transition: opacity 0.8s ease, transform 0.8s ease;
-    /* height: 1180px; */
-    /* width: 33%; */
     background: none;
-    /* border: 1px solid var(--gray); */
-    /* transform-style: preserve-3d; */
-    /* transition: transform 0.8s; */
 }
 
-.tarif .card.loaded {
-    /* opacity: 1; */
-    /* transform: translateY(0); */
-    /* display: flex; */
-    /* flex-direction: row; */
-}
-
-/* Удаляем CSS для переворота карточек при наведении */
-.tarif .card:hover:not(.flipped) {
-    /* transform: none; */
-}
 
 .tarif .card.flipped {
     transform: none;
@@ -79,6 +46,7 @@
     backface-visibility: hidden;
     padding: 40px 30px;
     transition: transform 0.8s;
+    color: white;
 }
 
 .tarif .front-card {
@@ -96,6 +64,7 @@
     flex-direction: column;
     gap: 20px;
     justify-content: flex-start;
+    color: white;
 }
 
 .tarif .illustartion {
@@ -111,17 +80,20 @@
     object-fit: contain;
 }
 
-.tarif  .title {
-    font-size: 78px;
+.tarif .title {
+    font-size: 48px;
     text-align: center;
+    display: flex;
+    gap: 10px;
 }
 
 .tarif .footer {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid var(--stroke);
-    padding-top: 20px;
+    align-items: flex-start;
+    /* border-top: 1px solid var(--stroke); */
+    padding: 20px 0px;
+    flex-direction: column;
 }
 
 .tarif .list ul {
@@ -129,7 +101,8 @@
     padding: 0;
 }
 
-.tarif .list li, .saving .description li  {
+.tarif .list li,
+.saving .description li {
     margin: 0px 0;
     font-size: 16px;
     display: -webkit-box;
@@ -140,8 +113,8 @@
     flex-wrap: nowrap;
 }
 
-
-.tarif .list .marker, .saving .description .marker {
+.tarif .list .marker,
+.saving .description .marker {
     background-image: url(../img/illustrations/marker.svg);
     background-size: inherit;
     background-repeat: no-repeat;
@@ -149,6 +122,7 @@
     height: 26px;
     margin-top: 6px;
 }
+
 .tarif .sublist .submarker {
     background-image: url(../img/illustrations/submarker.svg);
     background-size: contain;
@@ -159,8 +133,10 @@
 
 .tarif .header {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
 }
 
 .tarif .number {
@@ -177,68 +153,53 @@
 .tarif .description {
     text-align: left;
     font-size: 32px;
-    /* color: var(--crimson); */
     border-bottom: 1px solid white;
     padding: 10px 0px;
-    /* color: var(--gray); */
 }
 
 .line-for-price {
     width: 100%;
     height: 1px;
-    background: white;
-    margin: 0px 14px;
+    background: #B0B0B0;
+    margin: 6px 0px;
 }
 
 .tarif .footer {
     white-space: nowrap;
 }
-/* Анимация для карточки тарифов */
+
 .tarif .card {
-    /* opacity: 0; */
-    /* transform: translateY(50px); */
-    /* transition: opacity 0.8s ease, transform 0.8s ease; */
-    /* height: 1200px; */
-    /* width: 33%; */
     background: #ffffff15;
     border: 1px solid var(--gray);
-    /* transform-style: preserve-3d; */
-    /* transition: transform 0.8s; */
     color: white;
-    padding: 40px;
-    height: auto;
+    height: 900px;
     border-radius: 12px;
 }
+
 .tarif .card.loaded {
-    /* opacity: 1; */
-    /* transform: translateY(0); */
-    /* display: flex; */
     flex-direction: column;
     display: flex;
     justify-content: space-between;
 }
 
-/* Начальное состояние для back-card тарифов */
 .tarif .card .back-card {
     transform: rotateY(180deg);
     transition: transform 0.5s ease;
-    background: white;
+    /* background: white; */
     height: 100%;
     width: 100%;
 }
-/* При наведении: карточка переворачивается */
-.tarif .card:hover {
-    /* transform: rotateY(180deg); */
-}
+
+
 .tarif .card:hover .front-card {
     transform: rotateY(0);
 }
 
-/* При наведении: левая часть уходит, правая появляется */
 .tarif .card:hover .front-card {
     transform: translateX(-100%);
     transition: transform 0.5s ease;
 }
+
 .tarif .card:hover .back-card {
     transform: translateX(0);
     transition: transform 0.5s ease;
@@ -246,18 +207,24 @@
     flex-direction: column;
 }
 
-
 .tarif .back-card .illustartion img {
     width: 50px;
     height: auto;
 }
+
 .tarif .back-card .subtitle {
     font-size: 32px;
 }
 
 .tarif .front-card .title {
-    transform: translateY(-80px);
+    /* transform: translateY(-80px); */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
 }
+
 .tarif .sublist li {
     display: flex;
     flex-direction: row;
@@ -266,34 +233,28 @@
     font-size: 32px;
     color: var(--crimson);
 }
-.tarif .back-card .footer{
-    
-color: var(--black);
-    
-display: flex;
-    
-flex-direction: column;
-    
-align-items: flex-start;
-    
-gap: 20px;
-    
-bottom: 0;
-    
-position: inherit;
-    
-width: calc(100% - 60px);
-    
-bottom: 20px;
+
+.tarif .back-card .footer {
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+    bottom: 0;
+    position: inherit;
+    width: calc(100% - 60px);
+    bottom: 20px;
 }
-.tarif .front-card .footer{
-    
+
+.tarif .front-card .footer {
     color: var(--white);
 }
-.white  {
+
+.white {
     color: var(--white);
 }
-.price{
+
+.price {
     display: flex;
     height: auto;
     flex-direction: row;
@@ -301,10 +262,12 @@ bottom: 20px;
     width: 100%;
     align-content: center;
     align-items: center;
-    font-size: 48px;
-    padding-top: 40px;
+    font-size: 34px;
+    padding: 20px 0px;
     flex-flow: wrap;
+    color: white;
 }
+
 .back-card .line-for-price {
     background: black;
 }
@@ -312,5 +275,9 @@ bottom: 20px;
 .price p {
     font-size: 32px;
 }
-
-
+.footer p {
+    font-size: 35px;
+    color: #B0B0B0;
+    border-bottom: 1px solid var(--stroke);
+    padding: 20px 0px;
+}

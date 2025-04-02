@@ -24,26 +24,55 @@ error_reporting(0);
     <link rel="stylesheet" href="assets/css/modal.css?v=1.0">
     <link rel="stylesheet" href="assets/css/regalia-animation.css?v=1.0">
 </head>
-
+<script>
+    // Добавьте в assets/js/video-optimization.js
+document.addEventListener('DOMContentLoaded', () => {
+    // Отложенная загрузка видео ниже первого экрана
+    const lazyVideos = document.querySelectorAll('video[data-src]');
+    
+    const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const video = entry.target;
+                if (video.dataset.src) {
+                    const sources = video.querySelectorAll('source');
+                    sources.forEach(source => {
+                        if (source.dataset.src) {
+                            source.src = source.dataset.src;
+                        }
+                    });
+                    video.load();
+                    if (video.autoplay) video.play();
+                    videoObserver.unobserve(video);
+                }
+            }
+        });
+    }, {rootMargin: "100px 0px"});
+    
+    lazyVideos.forEach(video => {
+        videoObserver.observe(video);
+    });
+});
+</script>
 <body>
-<div id="loader-overlay">
-    <div class="loader-container">
-        <div class="logo-loader">
-        <div class="loader-motivation">
-    <div>бизнес</div>
-    <div>баланс</div>
-    <div>окружение</div>
-    <div>вдохновение</div>
-</div>
+    <div id="loader-overlay">
+        <div class="loader-container">
+            <div class="logo-loader">
+                <div class="loader-motivation">
+                    <div>бизнес</div>
+                    <div>баланс</div>
+                    <div>окружение</div>
+                    <div>вдохновение</div>
+                </div>
 
 
+            </div>
+            <div class="loader-progress">
+                <div class="loader-progress-bar" id="loader-progress-bar"></div>
+            </div>
+            <div class="loader-percentage" id="loader-percentage">0%</div>
         </div>
-        <div class="loader-progress">
-            <div class="loader-progress-bar" id="loader-progress-bar"></div>
-        </div>
-        <div class="loader-percentage" id="loader-percentage">0%</div>
     </div>
-</div>
 
     <header>
         <div class="container">
@@ -111,6 +140,7 @@ error_reporting(0);
             playsinline
             muted
             loop
+             loading="lazy"
             autoplay>
             <source type="video/MP4" src="assets/video/dd.MP4">
         </video>
@@ -120,8 +150,9 @@ error_reporting(0);
             preload="metadata"
             playsinline
             muted
-            loop
-            autoplay>
+            autoplay
+            loopя
+             loading="lazy">
             <source type="video/MP4" src="assets/video/dm.MP4">
         </video>
 
@@ -451,20 +482,20 @@ error_reporting(0);
     <section class="cards-our-team">
         <!-- Карточка 1 -->
         <div class="card">
-            <h3 class="card-title">Ценности</h3>
+            <h3 class="card-title">Предназначение</h3>
             <img class="lustr" src="assets/img/our-1.svg" alt="">
             <div class="card-gradient" style="overflow: hidden; background-color: black;">
                 <canvas id="canvas" width="1920" height="1080" style="display: block; filter: blur(100px); will-change: filter; transform: translateZ(0);"></canvas>
             </div>
-            <img class="card-our" src="assets/img/card-our/1.png" alt="">
+            <img class="card-our" src="assets/img/card-our/1.webp" alt="">
             <!-- Основной текст, который будет появляться -->
             <div class="card-text">
-            <div class="text-section">
-                <p>• Помогать людям проживать полноценную сбалансированную жизнь</p><br>
-                <p>• Объединить единомышленников по балансу бизнеса и семьи</p><br>
-                <p>• Помогать резидентам выделять время на развитие себя и своей семьи</p><br>
-                <p>• Помогать совмещать бизнес с семьей</p>
-            </div>
+                <div class="text-section">
+                    <p>• Помогать людям проживать полноценную сбалансированную жизнь</p><br>
+                    <p>• Объединить единомышленников по балансу бизнеса и семьи</p><br>
+                    <p>• Помогать резидентам выделять время на развитие себя и своей семьи</p><br>
+                    <p>• Помогать совмещать бизнес с семьей</p>
+                </div>
                 <div class="card-image">
                     <img src="assets/img/out-1.svg" alt="">
                 </div>
@@ -477,14 +508,14 @@ error_reporting(0);
             <div class="card-gradient" style="overflow: hidden; background-color: black;">
                 <canvas id="canvas" width="1920" height="1080" style="display: block; filter: blur(100px); will-change: filter; transform: translateZ(0);"></canvas>
             </div>
-            <img class="card-our" src="assets/img/card-our/2.png" alt="">
+            <img class="card-our" src="assets/img/card-our/2.webp" alt="">
             <!-- Основной текст, который будет появляться -->
             <div class="card-text">
-            <div class="text-section">
-                <p>• Создать самый большой семейный бизнес-клуб для предпринимателей</p><br>
-                <p>• Достичь показателей в 300 резидентов к осени 2025 года и 1000 резидентов к 2027 году</p><br>
-                <p>• Открыть представительство клуба в Москве к осени 2025 года и филиал клуба в Дубае к маю 2026 года</p>
-            </div>
+                <div class="text-section">
+                    <p>• Создать самый большой семейный бизнес-клуб для предпринимателей</p><br>
+                    <p>• Достичь показателей в 300 резидентов к осени 2025 года и 1000 резидентов к 2027 году</p><br>
+                    <p>• Открыть представительство клуба в Москве к осени 2025 года и филиал клуба в Дубае к маю 2026 года</p>
+                </div>
                 <div class="card-image">
                     <img src="assets/img/out-2.svg" alt="">
                 </div>
@@ -492,20 +523,20 @@ error_reporting(0);
         </div>
         <!-- Карточка 3 -->
         <div class="card">
-            <h3 class="card-title">Миссия</h3>
+            <h3 class="card-title">Ценности</h3>
             <img class="lustr" src="assets/img/our-3.svg" alt="">
             <div class="card-gradient" style="overflow: hidden; background-color: black;">
                 <canvas id="canvas" width="1920" height="1080" style="display: block; filter: blur(100px); will-change: filter; transform: translateZ(0);"></canvas>
             </div>
-            <img class="card-our" src="assets/img/card-our/3.png" alt="">
+            <img class="card-our" src="assets/img/card-our/3.webp" alt="">
             <!-- Основной текст, который будет появляться -->
             <div class="card-text">
-            <div class="text-section">
-                <p>• Баланс</p><br>
-                <p>• Окружение</p><br>
-                <p>• Бизнес</p><br>
-                <p>• Вдохновение</p>
-            </div>
+                <div class="text-section">
+                    <p>• Баланс</p><br>
+                    <p>• Окружение</p><br>
+                    <p>• Бизнес</p><br>
+                    <p>• Вдохновение</p>
+                </div>
                 <div class="card-image">
                     <img src="assets/img/out-3.svg" alt="">
                 </div>
@@ -525,7 +556,7 @@ error_reporting(0);
     <section class="founder ">
         <div class="container ">
             <div class="flex-center">
-                <img class="mobile-founder" src="assets/img/founder_mobile.png" alt="">
+                <img class="mobile-founder" src="assets/img/founder_mobile.webp" alt="">
                 <div class="flex column title">
                     <h3>
                         <span>Александр</span> <span>Казаченко</span>
@@ -611,8 +642,8 @@ error_reporting(0);
             <div class="flex-center">
                 <div class="flex title">
                     <h3><span>Сферы бизнеса, объединяющие </span> <span>участников клуба</span></h3>
-                    <img class="opi-1 block-img desktop" src="assets/img/illustrations/our-partners-back.png" alt="">
-                    <img class="opi-1 block-img mobile" src="assets/img/illustrations/our-partners-back-mobile.png" alt="">
+                    <img class="opi-1 block-img desktop" src="assets/img/illustrations/our-partners-back.webp" alt="">
+                    <img class="opi-1 block-img mobile" src="assets/img/illustrations/our-partners-back-mobile.webp" alt="">
                 </div>
 
             </div>
@@ -620,49 +651,94 @@ error_reporting(0);
     </section>
 
     <section id="tarifs" class="tarifs">
-    <div class="container">
-        <div class="flex-center">
-            <div class="tarif">
-                <div class="card personal">
-                    <div class="tarif-card-top">
-                    <div class="title">ЛИЧНЫЙ <span class="color-red">&bull;</span></div>
-                    <ul>
-                        <li>Отраслевые чаты</li>
-                        <li>Встречи с экспертом</li>
-                        <li>Форум-группа / мастермайнд</li>
-                        <li>Инвест-питчинг</li>
-                        <li>Поддержка комьюнити-менеджера</li>
-                        <li>Доступ к деловым и развлекательным мероприятиям</li>
-                        <li>Экскурсии в крупные компании и корпорации</li>
-                        <li>Персональный бадди</li>
-                        <li>Участие в клубных слётах</li>
-                        <li>Глубокий разбор бизнеса</li>
-                        <li>TRAVEL программа</li>
-                    </ul>
-                    </div>
-                    <div class="price">35 000 ₽ <span class="old-price">45 000 ₽</span> <span class="duration">1 месяц</span></div>
-                </div>
+        <div class="container">
+            <div class="flex-center">
+            <img class="tarif-illustration" src="assets/img/illustrations/tarifs.svg" alt="">
+
+                <div class="tarif">
                 <div class="card family">
-                    <div class="tarif-card-top">
-                    <div class="title">СЕМЕЙНЫЙ <span class="color-red">&bull;&bull;&bull;</span></div>
-                    <p class="description">Всё из тарифа ЛИЧНЫЙ +</p>
-                    <ul>
-                        <li>Детские и семейные мероприятия</li>
-                        <li>Первые места в зале</li>
-                        <li>Фирменный мерч</li>
-                        <li>PR личного бренда</li>
-                        <li>VIP-места для всей семьи</li>
-                        <li>Приоритет Travel</li>
-                    </ul>
+                        <div class="front-card">
+                            <div class="header">
+                            <div class="title">ПЕРСОНАЛЬНЫЙ <span class="color-red">&bull;</span></div> 
+                            <div class="center">для себя</div>
+
+                            </div>
+                            
+                            <div class="footer">
+                                <p>первые 100 резидентов</p>
+                                <div class="price">35 000 ₽ <span class="old-price">45 000 ₽</span> <span>месяц</span></div>
+
+                            </div>
+                        </div>
+                        <div class="back-card">
+                            <div class="tarif-card-top">
+                                <div class="title">ПЕРСОНАЛЬНЫЙ <span class="color-red">&bull;</span></div>
+                                <div class="center">для себя</div>
+                               
+                                <ul>
+                                    <li>Отраслевые чаты</li>
+                                    <li>Встречи с экспертом</li>
+                                    <li>Форум-группа / мастермайнд</li>
+                                    <li>Инвест-питчинг</li>
+                                    <li>Поддержка комьюнити-менеджера</li>
+                                    <li>Доступ к деловым и развлекательным мероприятиям</li>
+                                    <li>Экскурсии в крупные компании и корпорации</li>
+                                    <li>Персональный бадди</li>
+                                    <li>Участие в клубных слётах</li>
+                                    <li>Разбор бизнеса</li>
+                                    <li>TRAVEL программа</li>
+                                </ul>
+                            </div>
+                            <div class="footer">
+                                <p>первые 100 резидентов</p>
+                                <div class="price">35 000 ₽ <span class="old-price">45 000 ₽</span> <span>месяц</span></div>
+                                <a class="btn-primary" href="#contacts">Присоединиться</a>
+                            </div>
+                            
+                        </div>
                     </div>
-                    <div class="price">55 000 ₽ <span class="old-price">65 000 ₽</span> <span class="duration">1 месяц</span></div>
+                    
+                    <div class="card family">
+                        <div class="front-card">
+                            <div class="header">
+                            <div class="title">СЕМЕЙНЫЙ <span class="color-red">&bull;&bull;&bull;</span></div> 
+                            <div class="center">для семьи</div>
+
+                            </div>
+                            
+                            <div class="footer">
+                                <p>первые 100 резидентов</p>
+                                <div class="price">55 000 ₽ <span class="old-price">65 000 ₽</span> <span>месяц</span></div>
+
+                            </div>
+                        </div>
+                        <div class="back-card">
+                            <div class="tarif-card-top">
+                                <div class="title">СЕМЕЙНЫЙ <span class="color-red">&bull;&bull;&bull;</span></div>
+                                <div class="center">для семьи</div>
+                                <p class="description">Всё из тарифа <span class="color-red">ПЕРСОНАЛЬНЫЙ +</span></p>
+                                <ul>
+                                    <li>Детские и семейные мероприятия</li>
+                                    <li>VIP места для всей семьи</li>
+                                    <li>Фирменный мерч</li>
+                                    <li>PR личного бренда</li>
+                                  
+                                </ul>
+                            </div>
+                            <div class="footer">
+                                <p>первые 100 резидентов</p>
+                                <div class="price">55 000 ₽ <span class="old-price">65 000 ₽</span> <span>месяц</span></div>
+                                <a class="btn-primary" href="#contacts">Присоединиться</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
     <section class="famaly">
-        <img class="full-photo" src="assets/img/famaly.png" alt="">
+        <img class="full-photo" src="assets/img/famaly.webp" alt="">
         <div class="container ">
             <div class="flex-center">
                 <div class="column title">
@@ -676,7 +752,7 @@ error_reporting(0);
                     <p class="description">
                         <span>С нами вы больше не разрываетесь между работой и домом. </span> <br>
                         <span>Ваши дети растут в правильном окружении, а семья становится не жертвой успеха, а его частью.  
-                        Здесь вы снова чувствуете вкус жизни.  </span>
+                            Здесь вы снова чувствуете вкус жизни.  </span>
                     </p>
                     <img src="assets/img/illustrations/shapeline.svg" alt="">
                 </div>
@@ -770,20 +846,20 @@ error_reporting(0);
         </div>
     </section>
     <section class="starter">
-        <img class="block-img desktop " src="assets/img/starter.png" alt="">
-        <img class="block-img mobile" src="assets/img/starter-m.png" alt="">
+        <img class="block-img desktop " src="assets/img/starter.webp" alt="">
+        <img class="block-img mobile" src="assets/img/starter-m.webp" alt="">
     </section>
     <section class="famaly">
         <div class="container ">
             <div class="flex-center">
 
                 <p class="title-famaly">KIDS CLUB</p>
-                
+
                 <div class="nonormal">
                     <p class="description">
                         <span>Мы предусмотрели разные форматы для совместного<br> отдыха, развития и укрепления семейных ценностей, для <br>того, чтобы наши резиденты проживали сбалансированную<br> полноценную жизнь</span> <br>
                         <span>Ваши дети растут в правильном окружении, а семья становится не жертвой успеха, а его частью.  
-                        Здесь вы снова чувствуете вкус жизни.  </span>
+                            Здесь вы снова чувствуете вкус жизни.  </span>
                     </p>
                 </div>
                 <div class="strange-cards">
@@ -839,11 +915,11 @@ error_reporting(0);
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
                                     <p class="titile">PR и развитие
-                                    детских проектов</p>
+                                        детских проектов</p>
                                     <img class="strange-svg" src="assets/img/illustrations/strange-circle.svg" alt="">
                                 </div>
                                 <div class="flip-card-back fbi-6-6">
-                                    <p>Помощь и поддержка в развитии детских инициатив и проектов 
+                                    <p>Помощь и поддержка в развитии детских инициатив и проектов
 
                                     </p>
                                 </div>
@@ -860,12 +936,12 @@ error_reporting(0);
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
                                     <p class="titile">Финансовая грамотность
-                                    и бизнес-игры    </p>
+                                        и бизнес-игры </p>
                                     <img class="strange-svg" src="assets/img/illustrations/strange-circle.svg" alt="">
                                 </div>
                                 <div class="flip-card-back fbi-6">
                                     <p>Интерактивные занятия, где дети учатся считать деньги, составлять бюджеты
-и управлять ресурсами.  
+                                        и управлять ресурсами.
 
 
 
@@ -892,7 +968,7 @@ error_reporting(0);
                     </h3>
                 </div>
                 <div class="flex" id="securityCards">
-                    <div class="card-save" data-default-image="assets/img/o1.png" data-hover-image="assets/img/o1.png">
+                    <div class="card-save" data-default-image="assets/img/o1.webp" data-hover-image="assets/img/o1.webp">
                         <div class="card-bg"></div>
                         <div class="card-content">
                             <img src="assets/img/our-1.svg" alt="">
@@ -903,7 +979,7 @@ error_reporting(0);
                             </ul>
                         </div>
                     </div>
-                    <div class="card-save" data-default-image="assets/img/o2.png" data-hover-image="assets/img/o2.png">
+                    <div class="card-save" data-default-image="assets/img/o2.webp" data-hover-image="assets/img/o2.webp">
                         <div class="card-bg"></div>
                         <div class="card-content">
                             <img src="assets/img/our-2.svg" alt="">
@@ -914,7 +990,7 @@ error_reporting(0);
                             </ul>
                         </div>
                     </div>
-                    <div class="card-save" data-default-image="assets/img/o1.png" data-hover-image="assets/img/o3.png">
+                    <div class="card-save" data-default-image="assets/img/o1.webp" data-hover-image="assets/img/o3.webp">
                         <div class="card-bg"></div>
                         <div class="card-content">
                             <img src="assets/img/our-3.svg" alt="">
@@ -927,54 +1003,58 @@ error_reporting(0);
                     </div>
                 </div>
 
-<style>
-.card-save {
-    position: relative;
-    overflow: hidden;
-}
-.card-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.5s ease;
-    z-index: 1;
-}
-.card-content {
-    position: relative;
-    z-index: 2; /* Above the background */
-}
-</style>
+                <style>
+                    .card-save {
+                        position: relative;
+                        overflow: hidden;
+                    }
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const securityCards = document.querySelectorAll('#securityCards .card-save');
-    
-    securityCards.forEach(card => {
-        // Get image URLs from data attributes
-        const hoverImage = card.getAttribute('data-hover-image');
-        
-        // Set background image on the background element
-        const bgElement = card.querySelector('.card-bg');
-        bgElement.style.backgroundImage = `url('${hoverImage}')`;
-        
-        // Add hover events
-        card.addEventListener('mouseenter', function() {
-            bgElement.style.opacity = 1;
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            bgElement.style.opacity = 0;
-        });
-    });
-});
-</script>
+                    .card-bg {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-size: cover;
+                        background-position: center;
+                        opacity: 0;
+                        /* Initially hidden */
+                        transition: opacity 0.5s ease;
+                        z-index: 1;
+                    }
 
-                
+                    .card-content {
+                        position: relative;
+                        z-index: 2;
+                        /* Above the background */
+                    }
+                </style>
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const securityCards = document.querySelectorAll('#securityCards .card-save');
+
+                        securityCards.forEach(card => {
+                            // Get image URLs from data attributes
+                            const hoverImage = card.getAttribute('data-hover-image');
+
+                            // Set background image on the background element
+                            const bgElement = card.querySelector('.card-bg');
+                            bgElement.style.backgroundImage = `url('${hoverImage}')`;
+
+                            // Add hover events
+                            card.addEventListener('mouseenter', function() {
+                                bgElement.style.opacity = 1;
+                            });
+
+                            card.addEventListener('mouseleave', function() {
+                                bgElement.style.opacity = 0;
+                            });
+                        });
+                    });
+                </script>
+
+
 
 
             </div>
@@ -984,28 +1064,44 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     <section class="video" id="video">
-        <video class="desktop" src="assets/video/md.MP4" autoplay muted loop playsinline media="(min-width: 768px)"></video>
-        <video class="mobile" src="assets/video/mm.MP4" autoplay muted loop playsinline media="(max-width: 767px)"></video>
-        <!-- <div class="slogan">
-            <div class="flex">
-
-                <img class="text" src="assets/img/illustrations/slogan/Мышление.svg" alt="">
-                <img class="text" src="assets/img/illustrations/slogan/Семья.svg" alt="">
-            </div>
-            <div class="flex">
-
-                <img class="text" src="assets/img/illustrations/slogan/Бизнес.svg" alt="">
-                <img class="text" src="assets/img/illustrations/slogan/Дружба.svg" alt="">
-            </div>
-
-        </div> -->
-    </section>
+    <!-- Десктопное видео с отложенной загрузкой -->
+    <video 
+        class="desktop" 
+        preload="none" 
+        poster="assets/img/video-poster-desktop.jpg" 
+        muted 
+        loop 
+        playsinline 
+        loading="lazy" 
+        data-src="true">
+        <source data-src="assets/video/md.webm" type="video/webm" media="(min-width: 768px)">
+        <source data-src="assets/video/md.MP4" type="video/mp4" media="(min-width: 768px)">
+    </video>
+    
+    <!-- Мобильное видео с отложенной загрузкой -->
+    <video 
+        class="mobile" 
+        preload="none" 
+        poster="assets/img/video-poster-mobile.jpg" 
+        muted 
+        loop 
+        playsinline 
+        loading="lazy" 
+        data-src="true">
+        <source data-src="assets/video/mm.webm" type="video/webm" media="(max-width: 767px)">
+        <source data-src="assets/video/mm.MP4" type="video/mp4" media="(max-width: 767px)">
+    </video>
+    
+    <!-- Слоган и другой контент -->
+    <!-- <div class="slogan">...</div> -->
+</section>
     <section class="slet">
-        <img src="assets/img/1.png" alt=""> 
+        <img class="block-img desktop" src="assets/img/1.webp" alt="">
+        <img class="block-img mobile" src="assets/img/2.webp" alt="">
         <div class="bottom-slet">
-                    <a class="btn-primary" target="_blank" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=СЛЁТ+DOM&dates=20250707T100000Z/20250708T180000Z&details=Dom+Club+-+Закрытый+клуб+для+предпринимателей+и+C-level+руководителей.+Слёт+в+Охта+Парке,+Санкт-Петербург&location=Охта+Парк">Добавить в календарь</a>
+            <a class="btn-primary" target="_blank" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=СЛЁТ+DOM&dates=20250707T100000Z/20250708T180000Z&details=Dom+Club+-+Закрытый+клуб+для+предпринимателей+и+C-level+руководителей.+Слёт+в+Охта+Парке,+Санкт-Петербург&location=Охта+Парк">Добавить в календарь</a>
 
-                </div>   
+        </div>
     </section>
     <section class="lid" id="contacts">
         <div class="container">
@@ -1049,7 +1145,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="footer-top">
                     <div class="footer-item">
                         <span>Основные запросы</span>
-                        <a href="mailto:hello@dom.club">hello@dom.club</a>
+                        <a href="mailto:hello@dom.club">hello@dom-club.com</a>
                     </div>
                     <div class="footer-item">
                         <span>Телефон</span>
@@ -1085,6 +1181,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                     <div class="footer-item">
                         <a href="#contacts">Политика конфиденциальности</a>
+                    </div><div class="footer-item">
+                        <a href="#contacts">Договор оферты</a>
                     </div>
                 </div>
             </div>
@@ -1139,7 +1237,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         }, 1000);
                     }
                 });
-            }, { threshold: 0.3 });
+            }, {
+                threshold: 0.3
+            });
 
             if (sletSection) {
                 observer.observe(sletSection);
@@ -1226,56 +1326,62 @@ document.addEventListener('DOMContentLoaded', function() {
     <script src="assets/js/mobile-flip.js"></script>
     <script src="assets/js/team-cards-scroll.js"></script>
     <script src="assets/js/video-optimization.js"></script>
-    
+
     <!-- Yandex.Metrika Event Tracking -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Form submissions tracking
-            if(document.getElementById("mainJoinForm")) {
+            if (document.getElementById("mainJoinForm")) {
                 document.getElementById("mainJoinForm").addEventListener("submit", function() {
                     ym(100329183, 'reachGoal', 'main_form_submit');
                 });
             }
-            
-            if(document.getElementById("footerJoinForm")) {
+
+            if (document.getElementById("footerJoinForm")) {
                 document.getElementById("footerJoinForm").addEventListener("submit", function() {
                     ym(100329183, 'reachGoal', 'footer_form_submit');
                 });
             }
-            
+
             // Join button clicks tracking
             document.querySelectorAll('.btn-primary').forEach(button => {
                 button.addEventListener('click', function() {
                     ym(100329183, 'reachGoal', 'join_button_click');
                 });
             });
-            
+
             // Tariff selection tracking
             document.querySelectorAll('.tarif .btn-primary').forEach(btn => {
                 btn.addEventListener('click', function() {
                     const tariffName = this.closest('.card').querySelector('.title').textContent.trim();
-                    ym(100329183, 'reachGoal', 'tariff_selected', { tariff: tariffName });
+                    ym(100329183, 'reachGoal', 'tariff_selected', {
+                        tariff: tariffName
+                    });
                 });
             });
-            
+
             // Event registration tracking
             document.querySelectorAll('a[href*="calendar.google.com"]').forEach(link => {
                 link.addEventListener('click', function() {
                     const eventTitle = this.closest('.ivent')?.querySelector('.title')?.textContent.trim();
-                    ym(100329183, 'reachGoal', 'event_added_to_calendar', { event: eventTitle || 'Unknown Event' });
+                    ym(100329183, 'reachGoal', 'event_added_to_calendar', {
+                        event: eventTitle || 'Unknown Event'
+                    });
                 });
             });
-            
+
             // Social media clicks tracking
             document.querySelectorAll('.btn-social').forEach(link => {
                 link.addEventListener('click', function() {
                     const platform = this.classList.contains('btn-instagram') ? 'Instagram' : 'Telegram';
-                    ym(100329183, 'reachGoal', 'social_click', { platform: platform });
+                    ym(100329183, 'reachGoal', 'social_click', {
+                        platform: platform
+                    });
                 });
             });
         });
     </script>
-    
+
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function(m, e, t, r, i, k, a) {
